@@ -1,360 +1,174 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Busy Professionals Fitness Coach | Online Fitness Coaching for Working Professionals</title>
-
-<meta name="description" content="Get expert fitness coaching designed specifically for busy professionals. Lose weight, build strength, and improve energy levels with a customized fitness plan that fits your schedule.">
-
-<style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial, sans-serif;
-}
-
-body{
-line-height:1.8;
-color:#222;
-background:#fff;
-}
-
-.container{
-width:90%;
-max-width:1200px;
-margin:auto;
-}
-
-/* HERO SECTION */
-
-.hero{
-background:linear-gradient(135deg,#0f172a,#111827);
-color:#fff;
-padding:120px 20px;
-text-align:center;
-position:relative;
-overflow:hidden;
-}
-
-.hero::before{
-content:'';
-position:absolute;
-width:500px;
-height:500px;
-background:rgba(0,200,83,0.08);
-border-radius:50%;
-top:-250px;
-right:-150px;
-}
-
-.hero::after{
-content:'';
-position:absolute;
-width:400px;
-height:400px;
-background:rgba(0,200,83,0.05);
-border-radius:50%;
-bottom:-200px;
-left:-100px;
-}
-
-.hero .container{
-position:relative;
-z-index:2;
-}
-
-.tagline{
-display:inline-block;
-padding:10px 18px;
-background:rgba(255,255,255,0.08);
-border:1px solid rgba(255,255,255,0.15);
-border-radius:50px;
-font-size:13px;
-font-weight:700;
-letter-spacing:1px;
-margin-bottom:25px;
-}
-
-.hero h1{
-font-size:64px;
-line-height:1.1;
-font-weight:800;
-margin-bottom:25px;
-max-width:900px;
-margin-left:auto;
-margin-right:auto;
-}
-
-.hero p{
-font-size:22px;
-max-width:800px;
-margin:auto;
-opacity:0.9;
-}
-
-.hero-buttons{
-display:flex;
-justify-content:center;
-gap:15px;
-margin-top:40px;
-flex-wrap:wrap;
-}
-
-.btn{
-display:inline-block;
-padding:16px 36px;
-background:#00c853;
-color:#fff;
-text-decoration:none;
-border-radius:6px;
-font-weight:700;
-transition:0.3s;
-}
-
-.btn:hover{
-transform:translateY(-3px);
-}
-
-.btn-secondary{
-display:inline-block;
-padding:16px 36px;
-border:1px solid rgba(255,255,255,0.2);
-color:#fff;
-text-decoration:none;
-border-radius:6px;
-font-weight:700;
-transition:0.3s;
-}
-
-.btn-secondary:hover{
-background:rgba(255,255,255,0.05);
-}
-
-.hero-stats{
-display:flex;
-justify-content:center;
-gap:70px;
-margin-top:70px;
-flex-wrap:wrap;
-}
-
-.stat h3{
-font-size:38px;
-font-weight:800;
-margin-bottom:5px;
-}
-
-.stat p{
-font-size:15px;
-opacity:.8;
-}
-
-/* GENERAL */
-
-section{
-padding:80px 0;
-}
-
-h2{
-margin-bottom:25px;
-font-size:38px;
-}
-
-.cards{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
-margin-top:40px;
-}
-
-.card{
-padding:25px;
-background:#f4f4f4;
-border-radius:8px;
-}
-
-.cta{
-background:#111827;
-color:white;
-text-align:center;
-padding:80px 20px;
-}
-
-footer{
-background:#000;
-color:#fff;
-text-align:center;
-padding:25px;
-}
-
-/* MOBILE */
-
-@media(max-width:768px){
-
-.hero{
-padding:90px 20px;
-}
-
-.hero h1{
-font-size:42px;
-}
-
-.hero p{
-font-size:18px;
-}
-
-.hero-stats{
-gap:30px;
-}
-
-.stat h3{
-font-size:30px;
-}
-
-h2{
-font-size:30px;
-}
-
-}
-
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PeakForge | Fitness Coaching for Busy Professionals</title>
+  <meta name="description" content="Expert online fitness coaching designed for busy professionals. Sustainable fat loss, strength building, and high energy — all without sacrificing your career.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap');
+    
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    .heading-font {
+      font-family: 'Playfair Display', sans-serif;
+    }
+    .hero-bg {
+      background: linear-gradient(135deg, #0f172a 0%, #1e2937 100%);
+    }
+    .card-hover {
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .card-hover:hover {
+      transform: translateY(-12px);
+      box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.15);
+    }
+    .stat-number {
+      font-size: 3.5rem;
+      font-weight: 800;
+      background: linear-gradient(90deg, #22c55e, #86efac);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  </style>
 </head>
-<body>
+<body class="bg-gray-50 text-gray-900">
 
-<!-- HERO SECTION -->
+  <!-- NAVBAR -->
+  <nav class="bg-white border-b sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+      <div class="flex items-center gap-3">
+        <i class="fa-solid fa-dumbbell text-3xl text-green-500"></i>
+        <span class="text-2xl font-bold tracking-tight heading-font">PeakForge</span>
+      </div>
+      <div class="hidden md:flex items-center gap-8 text-sm font-medium">
+        <a href="#" class="hover:text-green-600 transition">How It Works</a>
+        <a href="#" class="hover:text-green-600 transition">Success Stories</a>
+        <a href="#" class="hover:text-green-600 transition">For Professionals</a>
+        <a href="#" class="hover:text-green-600 transition">Blog</a>
+      </div>
+      <a href="#" class="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-xl font-semibold transition">
+        Book Free Call
+      </a>
+    </div>
+  </nav>
 
-<section class="hero">
-<div class="container">
+  <!-- HERO SECTION -->
+  <section class="hero-bg text-white py-24 md:py-32 relative overflow-hidden">
+    <div class="absolute inset-0 bg-[radial-gradient(at_top_right,#22c55e10_0%,transparent_50%)]"></div>
+    <div class="max-w-7xl mx-auto px-6 relative">
+      <div class="max-w-3xl">
+        <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 px-5 py-2 rounded-3xl text-sm font-semibold mb-6">
+          <span class="text-green-400">●</span>
+          ONLINE COACHING FOR AMBITIOUS PROFESSIONALS
+        </div>
+        
+        <h1 class="text-6xl md:text-7xl font-bold leading-tight heading-font mb-6">
+          Fitness that fits your <span class="text-green-400">busy life</span>
+        </h1>
+        
+        <p class="text-xl md:text-2xl text-gray-300 mb-10">
+          Sustainable fat loss, strength, and energy — customized for executives, entrepreneurs, and high-performers.
+        </p>
+        
+        <div class="flex flex-wrap gap-4">
+          <a href="#" class="bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-2xl font-semibold text-lg flex items-center gap-3 transition">
+            <i class="fa-solid fa-arrow-right"></i>
+            Start Your Free Consultation
+          </a>
+          <a href="#" class="border border-white/50 hover:bg-white/10 px-8 py-4 rounded-2xl font-semibold text-lg transition">
+            Watch 2-min Video
+          </a>
+        </div>
+      </div>
 
-<span class="tagline">
-ONLINE FITNESS COACHING FOR WORKING PROFESSIONALS
-</span>
+      <!-- Stats -->
+      <div class="mt-16 grid grid-cols-3 gap-10 max-w-2xl">
+        <div>
+          <div class="stat-number">500+</div>
+          <p class="text-gray-400 mt-2">Professionals Coached</p>
+        </div>
+        <div>
+          <div class="stat-number">18,400</div>
+          <p class="text-gray-400 mt-2">Pounds Lost</p>
+        </div>
+        <div>
+          <div class="stat-number">4.98</div>
+          <p class="text-gray-400 mt-2">Average Rating</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<h1>
-Fitness Coaching For <br>
-Busy Professionals
-</h1>
+  <!-- TRUST BAR -->
+  <div class="bg-white py-6 border-b">
+    <div class="max-w-7xl mx-auto px-6 flex flex-wrap justify-center items-center gap-10 opacity-75">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/2560px-Amazon_logo.svg.png" alt="Amazon" class="h-6">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/BBC.svg/2560px-BBC.svg.png" alt="BBC" class="h-7">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/2560px-Google_2015_logo.svg.png" alt="Google" class="h-8">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/2560px-Apple_logo_black.svg.png" alt="Apple" class="h-8">
+    </div>
+  </div>
 
-<p>
-Lose weight, build strength, and reclaim your energy with a fitness system
-designed around your career, schedule, and lifestyle.
-No extreme diets. No hours in the gym. Just sustainable results.
-</p>
+  <!-- CHALLENGES -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold heading-font">You're not lazy. You're just busy.</h2>
+        <p class="text-xl text-gray-600 mt-4">Common struggles we help professionals overcome</p>
+      </div>
+      
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="card-hover bg-gray-50 p-8 rounded-3xl">
+          <div class="w-14 h-14 bg-orange-100 rounded-2xl flex items-center justify-center text-3xl mb-6">⏰</div>
+          <h3 class="text-2xl font-semibold mb-3">No Time</h3>
+          <p class="text-gray-600">Long hours, travel, and meetings make traditional gym routines impossible.</p>
+        </div>
+        <div class="card-hover bg-gray-50 p-8 rounded-3xl">
+          <div class="w-14 h-14 bg-red-100 rounded-2xl flex items-center justify-center text-3xl mb-6">⚡</div>
+          <h3 class="text-2xl font-semibold mb-3">Energy Crash</h3>
+          <p class="text-gray-600">Constant fatigue affects both performance at work and family time.</p>
+        </div>
+        <div class="card-hover bg-gray-50 p-8 rounded-3xl">
+          <div class="w-14 h-14 bg-blue-100 rounded-2xl flex items-center justify-center text-3xl mb-6">📈</div>
+          <h3 class="text-2xl font-semibold mb-3">Plateaus</h3>
+          <p class="text-gray-600">Weight keeps coming back despite trying multiple diets and programs.</p>
+        </div>
+        <div class="card-hover bg-gray-50 p-8 rounded-3xl">
+          <div class="w-14 h-14 bg-purple-100 rounded-2xl flex items-center justify-center text-3xl mb-6">🎯</div>
+          <h3 class="text-2xl font-semibold mb-3">Lack of Accountability</h3>
+          <p class="text-gray-600">Motivation fades without proper guidance and structure.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<div class="hero-buttons">
-<a href="#" class="btn">Book Free Consultation</a>
-<a href="#" class="btn-secondary">View Success Stories</a>
-</div>
+  <!-- CTA -->
+  <section class="bg-gradient-to-r from-green-600 to-emerald-600 py-20 text-white">
+    <div class="max-w-4xl mx-auto text-center px-6">
+      <h2 class="text-5xl font-bold heading-font mb-6">Ready to feel strong, confident, and in control again?</h2>
+      <p class="text-xl mb-10">Join 500+ professionals who transformed their body and energy without burnout.</p>
+      <a href="#" class="inline-block bg-white text-green-700 hover:bg-gray-100 px-12 py-5 rounded-2xl text-xl font-semibold transition">
+        Book Your Free Strategy Call
+      </a>
+      <p class="text-sm mt-6 opacity-90">Limited spots available • 15-minute call</p>
+    </div>
+  </section>
 
-<div class="hero-stats">
-
-<div class="stat">
-<h3>500+</h3>
-<p>Clients Coached</p>
-</div>
-
-<div class="stat">
-<h3>15K+</h3>
-<p>Pounds Lost</p>
-</div>
-
-<div class="stat">
-<h3>4.9★</h3>
-<p>Average Rating</p>
-</div>
-
-</div>
-
-</div>
-</section>
-
-<!-- CONTENT -->
-
-<section>
-<div class="container">
-
-<h2>Fitness Coaching Designed for Busy Professionals</h2>
-
-<p>
-Finding time for fitness can be challenging when you are balancing a demanding career,
-family responsibilities, meetings, deadlines, and personal commitments.
-Many people start fitness programs with motivation but struggle to maintain consistency
-because traditional fitness plans are not designed for real-world schedules.
-</p>
-
-<p>
-As a busy professionals fitness coach, my mission is to help professionals achieve
-their health and fitness goals without disrupting their careers or personal lives.
-The coaching system focuses on efficiency, sustainability, and long-term success.
-Instead of spending countless hours exercising or following restrictive diets,
-you receive a personalized strategy built around your lifestyle.
-</p>
-
-<p>
-Whether your goal is weight loss, muscle building, improved energy, better health,
-or increased confidence, a customized coaching plan can help you achieve results
-while maintaining balance in your daily routine.
-</p>
-
-</div>
-</section>
-
-<section>
-<div class="container">
-
-<h2>Common Fitness Challenges Busy Professionals Face</h2>
-
-<div class="cards">
-
-<div class="card">
-<h3>Lack of Time</h3>
-<p>Long work hours often make it difficult to commit to traditional fitness programs.</p>
-</div>
-
-<div class="card">
-<h3>Low Energy</h3>
-<p>Stress, poor nutrition, and lack of movement can reduce productivity and motivation.</p>
-</div>
-
-<div class="card">
-<h3>Weight Gain</h3>
-<p>Desk jobs and inactive lifestyles frequently contribute to unwanted weight gain.</p>
-</div>
-
-<div class="card">
-<h3>Inconsistency</h3>
-<p>Busy schedules make it difficult to stay accountable and maintain healthy habits.</p>
-</div>
-
-</div>
-
-</div>
-</section>
-
-<section class="cta">
-<div class="container">
-
-<h2>Ready to Transform Your Health?</h2>
-
-<p>
-Work with a Busy Professionals Fitness Coach and create a personalized fitness
-system that fits your lifestyle, schedule, and goals.
-</p>
-
-<a href="#" class="btn">Apply For Coaching</a>
-
-</div>
-</section>
-
-<footer>
-<p>© 2026 Busy Professionals Fitness Coach. All Rights Reserved.</p>
-</footer>
+  <footer class="bg-gray-900 text-gray-400 py-16">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="flex flex-col md:flex-row justify-between items-center gap-8">
+        <div class="flex items-center gap-3 text-white">
+          <i class="fa-solid fa-dumbbell text-4xl text-green-500"></i>
+          <span class="text-3xl font-bold heading-font">PeakForge</span>
+        </div>
+        <p class="text-center md:text-right">© 2026 PeakForge Fitness Coaching. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
 
 </body>
 </html>
-```
