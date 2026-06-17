@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,6 +10,7 @@
 <meta name="description" content="Get expert fitness coaching designed specifically for busy professionals. Lose weight, build strength, and improve energy levels with a customized fitness plan that fits your schedule.">
 
 <style>
+
 *{
 margin:0;
 padding:0;
@@ -19,6 +21,7 @@ font-family:Arial, sans-serif;
 body{
 line-height:1.8;
 color:#222;
+background:#fff;
 }
 
 .container{
@@ -27,34 +30,131 @@ max-width:1200px;
 margin:auto;
 }
 
+/* HERO SECTION */
+
 .hero{
-background:#111;
+background:linear-gradient(135deg,#0f172a,#111827);
 color:#fff;
-padding:100px 20px;
+padding:120px 20px;
 text-align:center;
+position:relative;
+overflow:hidden;
+}
+
+.hero::before{
+content:'';
+position:absolute;
+width:500px;
+height:500px;
+background:rgba(0,200,83,0.08);
+border-radius:50%;
+top:-250px;
+right:-150px;
+}
+
+.hero::after{
+content:'';
+position:absolute;
+width:400px;
+height:400px;
+background:rgba(0,200,83,0.05);
+border-radius:50%;
+bottom:-200px;
+left:-100px;
+}
+
+.hero .container{
+position:relative;
+z-index:2;
+}
+
+.tagline{
+display:inline-block;
+padding:10px 18px;
+background:rgba(255,255,255,0.08);
+border:1px solid rgba(255,255,255,0.15);
+border-radius:50px;
+font-size:13px;
+font-weight:700;
+letter-spacing:1px;
+margin-bottom:25px;
 }
 
 .hero h1{
-font-size:52px;
-margin-bottom:20px;
+font-size:64px;
+line-height:1.1;
+font-weight:800;
+margin-bottom:25px;
+max-width:900px;
+margin-left:auto;
+margin-right:auto;
 }
 
 .hero p{
 font-size:22px;
 max-width:800px;
 margin:auto;
+opacity:0.9;
+}
+
+.hero-buttons{
+display:flex;
+justify-content:center;
+gap:15px;
+margin-top:40px;
+flex-wrap:wrap;
 }
 
 .btn{
 display:inline-block;
-margin-top:30px;
-padding:15px 35px;
+padding:16px 36px;
 background:#00c853;
 color:#fff;
 text-decoration:none;
-border-radius:5px;
-font-weight:bold;
+border-radius:6px;
+font-weight:700;
+transition:0.3s;
 }
+
+.btn:hover{
+transform:translateY(-3px);
+}
+
+.btn-secondary{
+display:inline-block;
+padding:16px 36px;
+border:1px solid rgba(255,255,255,0.2);
+color:#fff;
+text-decoration:none;
+border-radius:6px;
+font-weight:700;
+transition:0.3s;
+}
+
+.btn-secondary:hover{
+background:rgba(255,255,255,0.05);
+}
+
+.hero-stats{
+display:flex;
+justify-content:center;
+gap:70px;
+margin-top:70px;
+flex-wrap:wrap;
+}
+
+.stat h3{
+font-size:38px;
+font-weight:800;
+margin-bottom:5px;
+}
+
+.stat p{
+font-size:15px;
+opacity:.8;
+}
+
+/* GENERAL */
 
 section{
 padding:80px 0;
@@ -79,7 +179,7 @@ border-radius:8px;
 }
 
 .cta{
-background:#111;
+background:#111827;
 color:white;
 text-align:center;
 padding:80px 20px;
@@ -91,24 +191,89 @@ color:#fff;
 text-align:center;
 padding:25px;
 }
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.hero{
+padding:90px 20px;
+}
+
+.hero h1{
+font-size:42px;
+}
+
+.hero p{
+font-size:18px;
+}
+
+.hero-stats{
+gap:30px;
+}
+
+.stat h3{
+font-size:30px;
+}
+
+h2{
+font-size:30px;
+}
+
+}
+
 </style>
 </head>
 <body>
 
+<!-- HERO SECTION -->
+
 <section class="hero">
 <div class="container">
 
-<h1>Busy Professionals Fitness Coach</h1>
+<span class="tagline">
+ONLINE FITNESS COACHING FOR WORKING PROFESSIONALS
+</span>
+
+<h1>
+Fitness Coaching For <br>
+Busy Professionals
+</h1>
 
 <p>
-Helping busy professionals lose weight, build strength, increase energy,
-and create sustainable fitness habits without spending hours in the gym.
+Lose weight, build strength, and reclaim your energy with a fitness system
+designed around your career, schedule, and lifestyle.
+No extreme diets. No hours in the gym. Just sustainable results.
 </p>
 
+<div class="hero-buttons">
 <a href="#" class="btn">Book Free Consultation</a>
+<a href="#" class="btn-secondary">View Success Stories</a>
+</div>
+
+<div class="hero-stats">
+
+<div class="stat">
+<h3>500+</h3>
+<p>Clients Coached</p>
+</div>
+
+<div class="stat">
+<h3>15K+</h3>
+<p>Pounds Lost</p>
+</div>
+
+<div class="stat">
+<h3>4.9★</h3>
+<p>Average Rating</p>
+</div>
+
+</div>
 
 </div>
 </section>
+
+<!-- CONTENT -->
 
 <section>
 <div class="container">
@@ -148,181 +313,25 @@ while maintaining balance in your daily routine.
 
 <div class="card">
 <h3>Lack of Time</h3>
-<p>
-Long work hours often make it difficult to commit to traditional fitness programs.
-</p>
+<p>Long work hours often make it difficult to commit to traditional fitness programs.</p>
 </div>
 
 <div class="card">
 <h3>Low Energy</h3>
-<p>
-Stress, poor nutrition, and lack of movement can reduce productivity and motivation.
-</p>
+<p>Stress, poor nutrition, and lack of movement can reduce productivity and motivation.</p>
 </div>
 
 <div class="card">
 <h3>Weight Gain</h3>
-<p>
-Desk jobs and inactive lifestyles frequently contribute to unwanted weight gain.
-</p>
+<p>Desk jobs and inactive lifestyles frequently contribute to unwanted weight gain.</p>
 </div>
 
 <div class="card">
 <h3>Inconsistency</h3>
-<p>
-Busy schedules make it difficult to stay accountable and maintain healthy habits.
-</p>
+<p>Busy schedules make it difficult to stay accountable and maintain healthy habits.</p>
 </div>
 
 </div>
-
-</div>
-</section>
-
-<section>
-<div class="container">
-
-<h2>Why Choose a Busy Professionals Fitness Coach?</h2>
-
-<p>
-A specialized busy professionals fitness coach understands the unique challenges
-working professionals face every day. Generic fitness programs often assume you
-have unlimited free time, perfect motivation, and complete control over your schedule.
-Real life rarely works that way.
-</p>
-
-<p>
-Professional coaching focuses on realistic strategies that fit into your lifestyle.
-Instead of expecting perfection, the goal is to build consistency. Small daily
-actions performed consistently create meaningful long-term results.
-</p>
-
-<p>
-Your coaching program is customized according to your work schedule, travel
-requirements, family commitments, current fitness level, and personal goals.
-This personalized approach allows you to make progress while maintaining a healthy
-balance between career success and personal wellness.
-</p>
-
-<p>
-As your busy professionals fitness coach, I help remove confusion by providing
-clear workout plans, nutrition guidance, accountability, and support throughout
-your journey.
-</p>
-
-</div>
-</section>
-
-<section>
-<div class="container">
-
-<h2>Online Fitness Coaching for Working Professionals</h2>
-
-<p>
-Online fitness coaching provides flexibility and convenience for professionals
-who cannot commit to fixed training schedules. Whether you work from home,
-travel frequently, manage a business, or have a demanding corporate role,
-online coaching allows you to access expert guidance from anywhere.
-</p>
-
-<p>
-Every coaching plan includes personalized workouts, nutrition recommendations,
-habit-building strategies, regular progress tracking, and ongoing support.
-The goal is to create a sustainable system that delivers long-term results.
-</p>
-
-<p>
-Workouts are designed to maximize efficiency. Many clients achieve excellent
-results with just three to four focused sessions per week.
-You do not need to spend hours exercising every day to improve your fitness.
-</p>
-
-</div>
-</section>
-
-<section>
-<div class="container">
-
-<h2>Benefits of Fitness Coaching for Busy Professionals</h2>
-
-<p>
-When you improve your physical health, every area of your life benefits.
-Many clients report increased energy, improved focus, better productivity,
-higher confidence, and reduced stress after implementing a structured fitness plan.
-</p>
-
-<p>
-A busy professionals fitness coach helps create systems that support long-term
-success. Rather than relying on motivation alone, you develop habits that make
-healthy choices easier and more sustainable.
-</p>
-
-<p>
-Benefits often include:
-</p>
-
-<ul>
-<li>Improved energy levels</li>
-<li>Weight loss and fat reduction</li>
-<li>Increased strength and muscle tone</li>
-<li>Better productivity at work</li>
-<li>Improved confidence</li>
-<li>Enhanced mental clarity</li>
-<li>Reduced stress levels</li>
-<li>Long-term healthy habits</li>
-</ul>
-
-</div>
-</section>
-
-<section>
-<div class="container">
-
-<h2>How the Coaching Process Works</h2>
-
-<p>
-Step 1: Schedule a consultation and discuss your goals.
-</p>
-
-<p>
-Step 2: Complete a fitness and lifestyle assessment.
-</p>
-
-<p>
-Step 3: Receive a customized fitness and nutrition plan.
-</p>
-
-<p>
-Step 4: Track progress and receive ongoing coaching support.
-</p>
-
-<p>
-Step 5: Build sustainable habits that help maintain results for years.
-</p>
-
-</div>
-</section>
-
-<section>
-<div class="container">
-
-<h2>Who This Coaching Is For</h2>
-
-<p>
-This coaching program is ideal for executives, entrepreneurs, managers,
-business owners, consultants, remote workers, and professionals with demanding schedules.
-</p>
-
-<p>
-If you struggle to find time for exercise, feel overwhelmed by conflicting
-fitness advice, or want a proven system that fits your lifestyle,
-working with a busy professionals fitness coach can help simplify the process.
-</p>
-
-<p>
-The focus is not just on short-term transformation but on building a healthier,
-stronger, and more energized version of yourself.
-</p>
 
 </div>
 </section>
@@ -345,3 +354,7 @@ system that fits your lifestyle, schedule, and goals.
 <footer>
 <p>© 2026 Busy Professionals Fitness Coach. All Rights Reserved.</p>
 </footer>
+
+</body>
+</html>
+```
